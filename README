@@ -1,0 +1,27 @@
+Catalyst-Plugin-EnhancedParams
+
+This module enhances Catalyst parameter processing support by adding hash (could
+also be viewed as object) parameters. It integrates well with Catalyst providing
+these hash parameters through the already used C<param()> method of the request 
+object but doesn't destroy the original parameter data so it's still somewhat 
+L<< CGI >>-compatible.
+
+It further provides helper methods C<param()>, C<parameters()> and its alias 
+C<params()> on the Catalyst context namespace so that you can be even lazier 
+and just use C<$c->param('field_name')> instead of C<$c->req->param('field_name')>.
+
+INSTALLATION
+
+To install this module, run the following commands:
+
+    perl Makefile.PL
+    make
+    make test
+    make install
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2006 Nilson Santos Figueiredo Júnior
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
